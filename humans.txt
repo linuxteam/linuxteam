@@ -1,0 +1,17 @@
+# The humans responsible & technology colophon
+# humanstxt.org
+
+
+# TEAM
+		Dimitrios Desyllas -- Web Develolper --@twitter_account
+		Aris Vasilikos -- Web Develolper -- @twitter_account
+		Adonis K. -- Web Designer -- @varemenos
+
+# THANKS
+
+		<name>
+
+# TECHNOLOGY COLOPHON
+
+		HTML5, CSS3
+		jQuery, Modernizr

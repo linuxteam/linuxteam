@@ -1,0 +1,21 @@
+<?php
+	require('/home/www/linuxteam/htdocs/phpBB3/config.php');
+	$id=$_GET['id'];
+	if(!intval($id)){
+		die("Wrong parameters");
+	}
+	$connection=mysql_connect($dbhost,$dbuser,$dbpasswd);
+	if(!$connection){
+		die("Could not connect to the server");
+	}
+	mysql_select_db("web",$connection);
+	mysql_query("set names 'utf8'",$connection);	
+	$query_s="SELECT path from pictures WHERE ACTIONID=".$id;
+	$query=mysql_query($query_s);
+	$array = array();
+	while( $result=mysql_fetch_assoc($query)){
+		$array[] = $result['path'];
+	}
+	$str = implode("<br>", $array);
+	echo $str;
+?>
