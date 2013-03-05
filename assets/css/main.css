@@ -347,7 +347,7 @@ span.blink{
 }
 
 #image_holder{
-	height: auto;
+	height: 600px;
 	max-width: 100%;
 	margin: 1em auto;
 	padding: 1em 0;
@@ -365,7 +365,7 @@ span.blink{
 }
 
 #image{
-	height: 600px;
+	height: 100%;
 	width: auto;
 }
 
