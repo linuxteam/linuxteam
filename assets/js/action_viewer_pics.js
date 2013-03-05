@@ -62,6 +62,7 @@ function HandleResponse(response){
 }
 
 function show(){
+	$("#image_holder img").removeClass("loading");
 	var st = "<button id='left_button' onclick=\"dec()\">&lt</button><button id='right_button' onclick=\"inc()\">&gt</button>";
 	var s="";
 	for(var i=0;(i<len)&&(i<meg);i++){

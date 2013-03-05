@@ -19,6 +19,6 @@
 ?>
 <h2 class="aligncenter">Καλως ήρθατε στην κοινότητά μας</h2>
 <div id="image_holder">
-	<img id="image" src="assets/img/loading.gif" />
+	<img id="image" class="loading" src="assets/img/loading.gif" />
 </div>
 <div id="img_select"></div>
