@@ -19,7 +19,7 @@
 	// deny direct access
 	defined('INCLUDES') or die('No direct access allowed.');
 	define('IN_PHPBB', true);
-	$phpbb_root_path = (defined('PHPBB_ROOT_PATH')) ? PHPBB_ROOT_PATH : "./phpBB3/";
+	$phpbb_root_path = (defined('PHPBB_ROOT_PATH')) ? PHPBB_ROOT_PATH : "./forum/";
 	$phpEx = substr(strrchr(__FILE__, '.'), 1);
 	include($phpbb_root_path . 'common.' . $phpEx);
 
@@ -37,7 +37,7 @@
 	$hostname = get_Hostname();
 	$logo = $hostname.'/assets/img/tux.png';
 	$header = '';
-	$header = $username.'@linuxteam-teilam:~$<span class="blink">_</span>';
+	$header = $username.'@linuxteam:~$<span class="blink">_</span>';
 ?>
 
 <!DOCTYPE html>
@@ -50,7 +50,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>LinuxTeam ΤΕΙ Λαμίας</title>
+	<title>LinuxTeam ΤΕΙ Στερεάς Ελλάδας</title>
 	<meta name="description" content="Κοινότητα φίλων Linux και Ελευθέρου λογισμικού Τει Λαμίας.">
 
 	<!-- Mobile viewport optimized: h5bp.com/viewport -->
@@ -93,18 +93,18 @@
 			<?php
 				if(($user->data['user_id'] != ANONYMOUS)&& (!$user->data['is_bot']))
 				{
-					echo '<img class="avatar" src="'.$hostname.'/phpBB3/download/file.php?avatar='.$user->data['user_avatar'].'">';
-					echo '<span class="username">Welcome <a href="'.$hostname.'/phpBB3/ucp.php">'.$user->data['username'].'</a>!</span>';
-					echo '<span class="unreadpms"><a href="'.$hostname.'/phpBB3/ucp.php?i=pm&folder=inbox">You have '.$user->data['user_new_privmsg'].' Unread PMs</a></span>';
+					echo '<img class="avatar" src="'.$hostname.'/forum/download/file.php?avatar='.$user->data['user_avatar'].'">';
+					echo '<span class="username">Welcome <a href="'.$hostname.'/forum/ucp.php">'.$user->data['username'].'</a>!</span>';
+					echo '<span class="unreadpms"><a href="'.$hostname.'/forum/ucp.php?i=pm&folder=inbox">You have '.$user->data['user_new_privmsg'].' Unread PMs</a></span>';
 				}
 			?>
 		</div>
 		<div class="floatright">
 			<!-- Login Form -->
 			<?php if(($user->data['user_id'] == ANONYMOUS)&& (!$user->data['is_bot'])): ?>
-				<a href="<?php echo $hostname; ?>/phpBB3/ucp.php?mode=register" title="register">Register</a>
+				<a href="<?php echo $hostname; ?>/forum/ucp.php?mode=register" title="register">Register</a>
 				<a class="auth-form-revealer" href="#">Login</a>
-				<form id="topbar-block" class="hidden" action="<?php echo $hostname; ?>/phpBB3/ucp.php?mode=login" method="post" accept-charset="utf-8">
+				<form id="topbar-block" class="hidden" action="<?php echo $hostname; ?>/forum/ucp.php?mode=login" method="post" accept-charset="utf-8">
 					<input type="text" name="username" value="" placeholder="username">
 					<input type="password" name="password" value="" placeholder="password" id="password">
 					<label class="checkboxlabel" for="rememberme">remember me</label>
@@ -118,7 +118,7 @@
 
 			<!-- Logout Form -->
 			<?php if(!($user->data['user_id'] == ANONYMOUS)&& (!$user->data['is_bot'])): ?>
-				<a href="<?php echo $hostname; ?>/phpBB3/ucp.php?mode=logout&sid=<?php echo $user->data['session_id'];?>"> Αποσύνδεση [ <?php echo $user->data['username']; ?> ]</a>
+				<a href="<?php echo $hostname; ?>/forum/ucp.php?mode=logout&sid=<?php echo $user->data['session_id'];?>"> Αποσύνδεση [ <?php echo $user->data['username']; ?> ]</a>
 			<?php endif ?>
 			<div class="clearfix"></div>
 		</div>
@@ -138,7 +138,7 @@
 						</li><li class="menu_box"><a href="'.$hostname.'/about.php">About Us</a>
 						</li><li class="menu_box"><a href="'.$hostname.'/events.php">Εκδηλώσεις</a>
 						</li><li class="menu_box"><a href="'.$hostname.'/projects.php">Projects</a>
-						</li><li class="menu_box"><a href="'.$hostname.'/phpBB3">Forum</a></li>
+						</li><li class="menu_box"><a href="'.$hostname.'/forum">Forum</a></li>
 					</ul>';
 			?>
 		</header>

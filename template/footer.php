@@ -22,7 +22,7 @@
 	</div> <!-- #main -->
 	<footer>
 		<p>Designed & Developed by Dimitrios Desyllas, Aris Vasilikos, Adonis K.</p>
-		<p>&copy; Linuxteam Tei Lamias <?php echo date('Y'); ?></p>
+		<p>&copy; Linuxteam Tei Stereas Elladas <?php echo date('Y'); ?></p>
 	</footer>
 </div> <!-- #container -->
 
